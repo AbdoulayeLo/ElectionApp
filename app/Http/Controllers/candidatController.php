@@ -22,21 +22,26 @@ class candidatController extends Controller
 
     public function ajout_candidat_traitement(Request $request)
     {
+        // dd($request);
         $request->validate([ 
                 'prenom'=>'required',
                 'nom'=>'required',
                 'parti'=>'required',
                 'photo'=>'required',
                 'biographie'=>'required',
-                // photo|mimes|png,jpg,jpeg,ico,svg|max:KB',
+                // image|mimes|png,jpg,jpeg,ico,svg|max:KB',
             ]);
-
+ 
+            //!Methode 1
             $candidat=new Candidat();
             $candidat->prenom=$request->prenom;
             $candidat->nom=$request->nom;
             $candidat->parti=$request->parti;
             $candidat->photo=$request->photo;
             $candidat->biographie=$request->biographie;
+
+            //!Methode 2
+            // Candidat::create($request->all());
 
             $candidat->save();
 
@@ -49,6 +54,11 @@ class candidatController extends Controller
         $candidat->delete();
 
         return redirect('/liste-candidat')->with('status','Le candidat a bien ete supprimer avec success.');
+}
+
+public function je_parraine(){
+    $listCand=Candidat::all();
+        return view('electeur.je-parraine',compact('listCand'));
 }
         
 }

@@ -30,7 +30,7 @@
           <!-- Navbar brand -->
           <a class="navbar-brand mt-2 mt-lg-0" href="#">
             <img
-              src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyN1bO5mbpor-8bsU1cICxviQrHBRmCpdRsw&usqp=CAU"
               height="15"
               alt="MDB Logo"
               loading="lazy"
@@ -39,13 +39,19 @@
           <!-- Left links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Dashboard</a>
+              <a class="nav-link fw-bold" href="#">Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Team</a>
+              <a class="nav-link fw-bold" href="{{url('liste-candidat')}}">Liste des candidats</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link fw-bold" href="{{url('liste-electeur')}}" >Listes des electeurs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="{{url('liste-des-parrains')}}" >Listes des Parrains</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
             </li>
           </ul>
           <!-- Left links -->
@@ -132,6 +138,7 @@
         <!-- Navbar -->
 <!-- Navbar -->
     </div>
+    
     
 </body>
 </html>

@@ -37,11 +37,25 @@ Route::get('liste-electeur',[ElecteurController::class,'liste_electeur']);
 
 Route::get('ajout-electeur',[ElecteurController::class,'ajout_electeur']);
 
+Route::post('/ajout-electeur/traitement',[ElecteurController::class,'ajouter_electeur_traitement']);
+
 Route::get('supprimer-electeur/{id}',[ElecteurController::class,'supprimer_electeur']);
 
 
-Route::post('/ajout-electeur/traitement',[ElecteurController::class,'ajouter_electeur_traitement']);
 // ! FIN
+
+//! POUR PARRAINER
+Route::get('liste-des-parrains',[ElecteurController::class,'liste_des_parrains']);
+
+// Route::get('/je-parraine',[ElecteurController::class,'je_parraine2']);
+
+Route::get('je-parraine/{id}',[ElecteurController::class,'je_parraine']);
+
+
+Route::post('je-parraine/traitement',[ElecteurController::class,'je_parraine_traitement']);
+
+
+//!FIN
 
 
 

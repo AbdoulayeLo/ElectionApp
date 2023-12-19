@@ -10,14 +10,14 @@
               </div> 
               @endif
             </div>
-                <a
+                <!-- <a
                         href="{{url('ajout-electeur')}}"
                         type="button"
                         class="btn btn-success btn-rounded btn-sm fw-bold float-end mt-4 mb-4"
                         data-mdb-ripple-color="dark"
                         >
                   Ajouter Electeur
-                </a>
+                </a> -->
 
 
   <div class="card-header">
@@ -28,13 +28,14 @@
             <tr>
 
               <th class="fw-bold">Prenom(s) et Nom</th>
-              <th class="fw-bold">CNI</th>
-              <th class="fw-bold">Adresse</th>
+              <th class="fw-bold">Numero electeur</th>
+              <th class="fw-bold">Secteur</th>
+              <th class="fw-bold">Candidat</th>
               <th class="fw-bold">Actions</th>
             </tr>
           </thead>
           <tbody>
-            @foreach($listElec as $list_elec)
+          @foreach($listParr as $list_parr)
             <tr>
               <td>
                 <div class="d-flex align-items-center">
@@ -45,29 +46,31 @@
                       class="rounded-circle"
                       />
                   <div class="ms-3">
-                    <p class="fw-bold mb-1">{{$list_elec->prenom}} {{$list_elec->nom}}</p>
+                    <p class="fw-bold mb-1">{{$list_parr->prenom}} {{$list_parr->nom}}""</p>
                  
                     <!-- <p class="text-muted mb-0">john.doe@gmail.com</p> -->
                   </div>
                 </div>
               </td>
               <td>
-                <p class="fw-normal mb-1">{{$list_elec->CNI}}</p>
+                <p class="fw-normal mb-1">{{$list_parr->CNI}}"</p>
                 <!-- <p class="text-muted mb-0">IT department</p> -->
               </td>
               <td>
-                <span class="badge badge-success rounded-pill d-inline">{{$list_elec->adresse}}</span>
-              </td>
+                <span class="badge badge-success rounded-pill d-inline">{{$list_parr->adresse}}"</span>
+               </td>   
               <td>
-                <button type="button" class="btn btn-red btn-sm btn-rounded fw-bold btn-primary">
+                <span class="badge badge-success rounded-pill d-inline">diomaye</span>
+              </td>
+              
+
+              <td>
+                <!-- <button type="button" class="btn btn-red btn-sm btn-rounded fw-bold btn-primary">
                   Edit
                 </button>
-                <a type="button" class="btn btn-red btn-sm btn-rounded fw-bold btn-danger" href="/supprimer-electeur/{{$list_elec->id}}">
+                <a type="button" class="btn btn-red btn-sm btn-rounded fw-bold btn-danger" href="#">
                   Supprimer
-                </a>
-                <a type="button" class="btn btn-red btn-sm btn-rounded fw-bold btn-warning" href="/je-parraine/{{$list_elec->id}}">
-                  je parraine
-                </a>
+                </a> -->
               </td>
             </tr>
             @endforeach
